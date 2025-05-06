@@ -16,7 +16,7 @@ public class Sensor {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @Column(name = "name")
     @NotEmpty(message = "Название не должно быть пустым!")
@@ -38,7 +38,7 @@ public class Sensor {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

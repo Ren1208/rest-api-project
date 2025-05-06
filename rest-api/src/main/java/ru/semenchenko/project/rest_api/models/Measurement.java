@@ -17,17 +17,17 @@ public class Measurement {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @Column(name = "value")
     @NotEmpty
     @Max(100)
     @Min(-100)
-    private double value;
+    private Double value;
 
     @Column(name = "raining")
     @NotEmpty
-    private boolean raining;
+    private Boolean raining;
 
     @Column(name = "measurement_time")
     @NotEmpty
@@ -46,7 +46,7 @@ public class Measurement {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -54,7 +54,7 @@ public class Measurement {
         return value;
     }
 
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
@@ -62,7 +62,7 @@ public class Measurement {
         return raining;
     }
 
-    public void setRaining(boolean raining) {
+    public void setRaining(Boolean raining) {
         this.raining = raining;
     }
 
