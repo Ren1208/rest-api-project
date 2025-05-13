@@ -8,12 +8,15 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import ru.semenchenko.project.rest_api.dto.MeasurementDTO;
+import ru.semenchenko.project.rest_api.dto.MeasurementsResponse;
 import ru.semenchenko.project.rest_api.models.Measurement;
 import ru.semenchenko.project.rest_api.models.Sensor;
 import ru.semenchenko.project.rest_api.services.MeasurementsService;
 import ru.semenchenko.project.rest_api.util.MeasurementErrorResponse;
 import ru.semenchenko.project.rest_api.util.MeasurementException;
 import ru.semenchenko.project.rest_api.util.MeasurementValidator;
+
+import java.util.stream.Collectors;
 
 import static ru.semenchenko.project.rest_api.util.ErrorsUtil.returnErrorsToClient;
 
@@ -51,6 +54,14 @@ public class MeasurementsController {
 
     }
 
+    @GetMapping()
+    public MeasurementsResponse getAllMeasurements() {
+        return new MeasurementsResponse(measurementsService.findAll()
+                .stream()
+                .map(this::convertToMeasurementDTO)
+                .collect(Collectors.toList()));
+    }
+
     @ExceptionHandler
     private ResponseEntity<MeasurementErrorResponse> handleException(MeasurementException e) {
         MeasurementErrorResponse response = new MeasurementErrorResponse(
@@ -63,5 +74,9 @@ public class MeasurementsController {
 
     private Measurement convertToMeasurement(MeasurementDTO measurementDTO) {
         return modelMapper.map(measurementDTO, Measurement.class);
+    }
+
+    private MeasurementDTO convertToMeasurementDTO(Measurement measurement) {
+        return modelMapper.map(measurement, MeasurementDTO.class);
     }
 }
