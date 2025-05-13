@@ -24,4 +24,9 @@ public class SensorsService {
     public Optional<Sensor> getSensorByName(String name) {
         return sensorRepository.findByName(name);
     }
+
+    public void register(Sensor sensor) {
+        sensorRepository.save(sensor);
+    }
+
 }
