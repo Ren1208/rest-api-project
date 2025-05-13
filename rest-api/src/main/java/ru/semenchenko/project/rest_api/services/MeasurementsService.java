@@ -6,6 +6,7 @@ import ru.semenchenko.project.rest_api.models.Measurement;
 import ru.semenchenko.project.rest_api.repositories.MeasurementRepository;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * @author Artyom Semenchenko
@@ -27,6 +28,10 @@ public class MeasurementsService {
     public void add(Measurement measurement) {
         enrichMeasurement(measurement);
         measurementRepository.save(measurement);
+    }
+
+    public List<Measurement> findAll() {
+        return measurementRepository.findAll();
     }
 
     private void enrichMeasurement(Measurement measurement) {
