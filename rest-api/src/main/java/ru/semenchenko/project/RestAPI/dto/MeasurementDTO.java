@@ -1,9 +1,9 @@
-package ru.semenchenko.project.rest_api.dto;
+package ru.semenchenko.project.RestAPI.dto;
 
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
-import ru.semenchenko.project.rest_api.models.Sensor;
+import ru.semenchenko.project.RestAPI.models.Sensor;
 
 /**
  * @author Artyom Semenchenko

@@ -1,4 +1,4 @@
-package ru.semenchenko.project.rest_api.dto;
+package ru.semenchenko.project.RestAPI.dto;
 
 import java.util.List;
 

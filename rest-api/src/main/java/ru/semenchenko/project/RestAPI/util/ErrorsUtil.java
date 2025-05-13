@@ -1,4 +1,4 @@
-package ru.semenchenko.project.rest_api.util;
+package ru.semenchenko.project.RestAPI.util;
 
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;

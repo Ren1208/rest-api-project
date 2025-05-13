@@ -1,9 +1,9 @@
-package ru.semenchenko.project.rest_api.services;
+package ru.semenchenko.project.RestAPI.services;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.semenchenko.project.rest_api.models.Measurement;
-import ru.semenchenko.project.rest_api.repositories.MeasurementRepository;
+import ru.semenchenko.project.RestAPI.models.Measurement;
+import ru.semenchenko.project.RestAPI.repositories.MeasurementRepository;
 
 import java.time.LocalDateTime;
 import java.util.List;

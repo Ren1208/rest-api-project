@@ -1,10 +1,10 @@
-package ru.semenchenko.project.rest_api.util;
+package ru.semenchenko.project.RestAPI.util;
 
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
-import ru.semenchenko.project.rest_api.models.Measurement;
-import ru.semenchenko.project.rest_api.services.SensorsService;
+import ru.semenchenko.project.RestAPI.models.Measurement;
+import ru.semenchenko.project.RestAPI.services.SensorsService;
 
 /**
  * @author Artyom Semenchenko

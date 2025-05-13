@@ -1,9 +1,8 @@
-package ru.semenchenko.project.rest_api.models;
+package ru.semenchenko.project.RestAPI.models;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDateTime;

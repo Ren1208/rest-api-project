@@ -1,9 +1,9 @@
-package ru.semenchenko.project.rest_api.services;
+package ru.semenchenko.project.RestAPI.services;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.semenchenko.project.rest_api.models.Sensor;
-import ru.semenchenko.project.rest_api.repositories.SensorRepository;
+import ru.semenchenko.project.RestAPI.models.Sensor;
+import ru.semenchenko.project.RestAPI.repositories.SensorRepository;
 
 import java.util.Optional;
 

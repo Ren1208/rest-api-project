@@ -1,8 +1,8 @@
-package ru.semenchenko.project.rest_api.repositories;
+package ru.semenchenko.project.RestAPI.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import ru.semenchenko.project.rest_api.models.Measurement;
+import ru.semenchenko.project.RestAPI.models.Measurement;
 
 /**
  * @author Artyom Semenchenko

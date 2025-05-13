@@ -1,10 +1,9 @@
-package ru.semenchenko.project.rest_api;
+package ru.semenchenko.project.RestAPI;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.ui.ModelMap;
 
 @SpringBootApplication
 public class RestApiProjectApplication {

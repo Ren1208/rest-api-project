@@ -1,10 +1,10 @@
-package ru.semenchenko.client.rest_api_client;
+package ru.semenchenko.project.RestAPI;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RestApiClientApplicationTests {
+class RestApiProjectApplicationTests {
 
 	@Test
 	void contextLoads() {

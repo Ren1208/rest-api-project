@@ -1,4 +1,4 @@
-package ru.semenchenko.project.rest_api.util;
+package ru.semenchenko.project.RestAPI.util;
 
 
 /**

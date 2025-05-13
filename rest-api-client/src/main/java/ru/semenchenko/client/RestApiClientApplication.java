@@ -1,4 +1,4 @@
-package ru.semenchenko.client.rest_api_client;
+package ru.semenchenko.client;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
