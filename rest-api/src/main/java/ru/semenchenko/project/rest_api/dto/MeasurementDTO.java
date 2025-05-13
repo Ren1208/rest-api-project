@@ -2,7 +2,7 @@ package ru.semenchenko.project.rest_api.dto;
 
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import ru.semenchenko.project.rest_api.models.Sensor;
 
 /**
@@ -11,15 +11,15 @@ import ru.semenchenko.project.rest_api.models.Sensor;
 
 public class MeasurementDTO {
 
-    @NotEmpty
+    @NotNull
     @Max(100)
     @Min(-100)
     private Double value;
 
-    @NotEmpty
+    @NotNull
     private Boolean raining;
 
-    @NotEmpty
+    @NotNull
     private Sensor sensor;
 
     public Double getValue() {
