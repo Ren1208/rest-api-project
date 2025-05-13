@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ru.semenchenko.project</groupId>
-	<artifactId>server</artifactId>
+	<artifactId>rest-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>REST API Project</name>
 	<description>REST API сервис, который принимает данные от &quot;метеорологического датчика&quot;.</description>
