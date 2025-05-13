@@ -25,6 +25,7 @@ public class SensorsService {
         return sensorRepository.findByName(name);
     }
 
+    @Transactional
     public void register(Sensor sensor) {
         sensorRepository.save(sensor);
     }
