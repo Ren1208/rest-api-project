@@ -62,6 +62,14 @@ public class MeasurementsController {
                 .collect(Collectors.toList()));
     }
 
+    @GetMapping("/rainyDaysCount")
+    public Long rainyDaysCount() {
+        return measurementsService.findAll()
+                .stream()
+                .filter(Measurement::isRaining)
+                .count();
+    }
+
     @ExceptionHandler
     private ResponseEntity<MeasurementErrorResponse> handleException(MeasurementException e) {
         MeasurementErrorResponse response = new MeasurementErrorResponse(
