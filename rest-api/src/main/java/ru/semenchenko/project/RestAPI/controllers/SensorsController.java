@@ -6,12 +6,18 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import ru.semenchenko.project.RestAPI.dto.MeasurementDTO;
+import ru.semenchenko.project.RestAPI.dto.MeasurementsResponse;
 import ru.semenchenko.project.RestAPI.dto.SensorDTO;
+import ru.semenchenko.project.RestAPI.dto.SensorsResponse;
+import ru.semenchenko.project.RestAPI.models.Measurement;
 import ru.semenchenko.project.RestAPI.models.Sensor;
 import ru.semenchenko.project.RestAPI.services.SensorsService;
 import ru.semenchenko.project.RestAPI.util.MeasurementErrorResponse;
 import ru.semenchenko.project.RestAPI.util.MeasurementException;
 import ru.semenchenko.project.RestAPI.util.SensorValidator;
+
+import java.util.stream.Collectors;
 
 import static ru.semenchenko.project.RestAPI.util.ErrorsUtil.returnErrorsToClient;
 
@@ -48,6 +54,14 @@ public class SensorsController {
         return ResponseEntity.ok(HttpStatus.OK);
     }
 
+    @GetMapping()
+    public SensorsResponse getAllSensors() {
+        return new SensorsResponse(sensorsService.findAll()
+                .stream()
+                .map(this::convertToSensorDTO)
+                .collect(Collectors.toList()));
+    }
+
     @ExceptionHandler
     private ResponseEntity<MeasurementErrorResponse> handleException(MeasurementException e) {
         MeasurementErrorResponse response = new MeasurementErrorResponse(
@@ -62,4 +76,7 @@ public class SensorsController {
         return modelMapper.map(sensorDTO, Sensor.class);
     }
 
+    private SensorDTO convertToSensorDTO(Sensor sensor) {
+        return modelMapper.map(sensor, SensorDTO.class);
+    }
 }

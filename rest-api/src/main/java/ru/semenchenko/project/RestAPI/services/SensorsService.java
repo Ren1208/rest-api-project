@@ -5,6 +5,7 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.semenchenko.project.RestAPI.models.Sensor;
 import ru.semenchenko.project.RestAPI.repositories.SensorRepository;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -28,6 +29,10 @@ public class SensorsService {
     @Transactional
     public void register(Sensor sensor) {
         sensorRepository.save(sensor);
+    }
+
+    public List<Sensor> findAll() {
+        return sensorRepository.findAll();
     }
 
 }

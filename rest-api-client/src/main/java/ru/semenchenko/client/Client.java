@@ -22,7 +22,7 @@ public class Client {
     private static final double MIN_TEMPERATURE = -70.0;
     private static final double MAX_TEMPERATURE = 50.0;
     private static final String SENSOR_NAME = "Sensor";
-    private static final int MEASUREMENTS_COUNT = 100;
+    private static final int MEASUREMENTS_COUNT = 20;
 
     private static final RestTemplate restTemplate = new RestTemplate();
 
