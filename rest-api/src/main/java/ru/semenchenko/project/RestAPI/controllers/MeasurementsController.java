@@ -65,7 +65,7 @@ public class MeasurementsController {
     public Long rainyDaysCount() {
         return measurementsService.findAll()
                 .stream()
-                .filter(Measurement::isRaining)
+                .filter(Measurement::getRaining)
                 .count();
     }
 

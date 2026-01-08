@@ -3,6 +3,8 @@ package ru.semenchenko.project.RestAPI.models;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
@@ -10,6 +12,8 @@ import java.util.List;
  * @author Artyom Semenchenko
  */
 
+@Setter
+@Getter
 @Entity
 @Table(name = "Sensor")
 public class Sensor {
@@ -34,19 +38,4 @@ public class Sensor {
         this.name = name;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 }
