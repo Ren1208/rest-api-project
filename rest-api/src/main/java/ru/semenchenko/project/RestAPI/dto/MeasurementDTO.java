@@ -3,12 +3,18 @@ package ru.semenchenko.project.RestAPI.dto;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
+import lombok.Getter;
+import lombok.Setter;
 import ru.semenchenko.project.RestAPI.models.Sensor;
+
+import java.time.LocalDateTime;
 
 /**
  * @author Artyom Semenchenko
  */
 
+@Setter
+@Getter
 public class MeasurementDTO {
 
     @NotNull
@@ -20,29 +26,9 @@ public class MeasurementDTO {
     private Boolean raining;
 
     @NotNull
-    private Sensor sensor;
+    private LocalDateTime measurementTime;
 
-    public Double getValue() {
-        return value;
-    }
+    @NotNull
+    private String sensorName;
 
-    public void setValue(Double value) {
-        this.value = value;
-    }
-
-    public Boolean getRaining() {
-        return raining;
-    }
-
-    public void setRaining(Boolean raining) {
-        this.raining = raining;
-    }
-
-    public Sensor getSensor() {
-        return sensor;
-    }
-
-    public void setSensor(Sensor sensor) {
-        this.sensor = sensor;
-    }
 }
