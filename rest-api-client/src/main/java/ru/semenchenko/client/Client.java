@@ -6,6 +6,7 @@ import org.springframework.web.client.RestTemplate;
 import ru.semenchenko.client.dto.MeasurementDTO;
 import ru.semenchenko.client.dto.MeasurementsResponse;
 
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +22,7 @@ public class Client {
     private static final String GET_ALL_MEASUREMENTS_URL = "http://localhost:8080/measurements";
     private static final double MIN_TEMPERATURE = -70.0;
     private static final double MAX_TEMPERATURE = 50.0;
-    private static final String SENSOR_NAME = "Sensor";
+    private static final String SENSOR_NAME = "New Sensor2";
     private static final int MEASUREMENTS_COUNT = 20;
 
     private static final RestTemplate restTemplate = new RestTemplate();
@@ -66,6 +67,7 @@ public class Client {
         jsonData.put("value", value);
         jsonData.put("raining", raining);
         jsonData.put("sensor", Map.of("name", sensorName));
+        jsonData.put("measurementTime", LocalDateTime.now().toString());
 
         sendPostRequest(ADD_MEASUREMENT_URL, jsonData);
     }

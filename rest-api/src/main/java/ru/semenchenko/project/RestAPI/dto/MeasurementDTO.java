@@ -29,6 +29,6 @@ public class MeasurementDTO {
     private LocalDateTime measurementTime;
 
     @NotNull
-    private String sensorName;
+    private SensorDTO sensor;
 
 }

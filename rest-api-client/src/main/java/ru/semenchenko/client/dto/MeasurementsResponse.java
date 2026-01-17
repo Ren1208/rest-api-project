@@ -1,19 +1,17 @@
 package ru.semenchenko.client.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.List;
 
 /**
  * @author Artyom Semenchenko
  */
 
+@Getter
+@Setter
 public class MeasurementsResponse {
     private List<MeasurementDTO> measurements;
 
-    public List<MeasurementDTO> getMeasurements() {
-        return measurements;
-    }
-
-    public void setMeasurements(List<MeasurementDTO> measurements) {
-        this.measurements = measurements;
-    }
 }
